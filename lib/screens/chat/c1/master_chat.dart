@@ -5,12 +5,8 @@ class MasterChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-        backgroundColor: const Color(0xFF31ADF3),
-      ),
-      body:const BodyC1Pages(),
+    return const Scaffold(
+      body:BodyC1Pages(),
     );
   }
 }

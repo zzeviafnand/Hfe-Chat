@@ -54,9 +54,9 @@ class ClassMaster extends StatelessWidget {
                   ),
                 ),
             ),
-            const SizedBox(
-              height: 200,
-              child: TabBarView(
+            SizedBox(
+              height: MediaQuery.of(context).size.height/ 7.0,
+              child: const TabBarView(
                 children: [
                   Center(child: Text('Chat')),
                   Center(child: Text('Status'))

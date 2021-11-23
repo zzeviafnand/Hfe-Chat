@@ -1,24 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hfe_chat/screens/groub/component/groub_bar.dart';
 class BodyGPage extends StatelessWidget {
   const BodyGPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      height: size.height *0.2,
-      child: Stack(
-        children: [
-          Container(
-            height: size.height *0.2  -25,
-            decoration: const BoxDecoration(
-              color: Color(0xFF31ADF3),
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20)
-              )
-            ),
-            child: Row(
+    return Scaffold(
+      appBar: GroupBar(
+        height: 120,
+        child: Row(
                 children: [
                   const Padding(
                     padding: EdgeInsets.all(8.0),
@@ -60,9 +51,8 @@ class BodyGPage extends StatelessWidget {
                   ),
               ],
             ),
-          ),
-        ],
       ),
+      body: const Center(child: Text("Group")),
     );
   }
 }

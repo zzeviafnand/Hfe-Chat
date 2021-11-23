@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hfe_chat/screens/wellcome/splash_3.dart';
-
+import 'package:hfe_chat/screens/setting/component/akun/main_akun.dart';
 class SplashRegistrasi extends StatelessWidget {
   const SplashRegistrasi({ Key? key }) : super(key: key);
 
@@ -66,7 +65,7 @@ class SplashRegistrasi extends StatelessWidget {
               onTap: (){
                 Navigator.pushReplacement(context, 
                 MaterialPageRoute(
-                  builder: (context) => const SplashOtp()));
+                  builder: (context) => const MainAkunScreens()));
               },
               child: Container(
                 width: 180,

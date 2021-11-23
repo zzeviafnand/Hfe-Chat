@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 
-class BarChatPage extends StatelessWidget implements PreferredSizeWidget{
+class GroupBar extends StatelessWidget implements PreferredSizeWidget{
   final Widget child;
   final double height;
-  const BarChatPage({
+  const GroupBar({ 
     Key? key,
     required this.child,
     this.height = kToolbarHeight 
-  }) : super(key: key);
+    }) : super(key: key);
   @override
   Size get preferredSize => Size.fromHeight(height);
-
   @override
   Widget build(BuildContext context) {
     return Container(
       height: preferredSize.height,
-      color: const Color(0xFF31ADF3),
+      decoration: const BoxDecoration(
+        color: Color(0xFF31ADF3),
+        borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20)
+              )
+      ),
       alignment: Alignment.center,
       child: child,
     );

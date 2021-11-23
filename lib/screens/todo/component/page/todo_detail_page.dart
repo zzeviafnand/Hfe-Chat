@@ -30,7 +30,7 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
   Future refreshNote() async {
     setState(() => isLoading = true);
 
-    this.toDo = await ToDoDataBase.instance.readToDo(widget.toDoId);
+    toDo = await ToDoDataBase.instance.readToDo(widget.toDoId);
 
     setState(() => isLoading = false);
   }
